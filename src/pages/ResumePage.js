@@ -1,7 +1,7 @@
 import SectionTitle from '../components/SectionTitle';
 import resumeImage from '../assets/myself3.png';
 import { profile } from '../data/portfolioData';
-import resumeDoc from '../data/Shreshtha_Sharma_Resume.docx';
+import resumeDoc from '../data/Shreshtha_Sharma_Resume.pdf';
 
 const education = [
   {
@@ -58,10 +58,10 @@ function ResumePage() {
         <div className="resume-block">
           <h3>Certifications</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
-            <img src="/cerc-1.jpg" alt="Certification 1" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src="/cerc-2.jpg" alt="Certification 2" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src="/cer3.jpg" alt="Certification 3" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src="/cerc-4.jpg" alt="Certification 4" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-1.jpg"} alt="Certification 1" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-2.jpg"} alt="Certification 2" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={process.env.PUBLIC_URL + "/cer3.jpg"} alt="Certification 3" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-4.jpg"} alt="Certification 4" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ function ResumePage() {
         <p>
           Download locally to view detailed resume.
         </p>
-        <a className="btn btn-primary" href={resumeDoc} download="Shreshtha_Sharma_Resume.docx">
+        <a className="btn btn-primary" href={resumeDoc} download="Shreshtha_Sharma_Resume.pdf">
           Download Resume
         </a>
       </aside>

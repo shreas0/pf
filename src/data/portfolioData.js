@@ -165,14 +165,14 @@ export const projects = [
     stack: 'React, JavaScript, CSS',
     description: 'A full-stack Attendance Management System using React.js with role-based access for teachers and students.',
     url: 'https://shreas0.github.io/attendance-system/',
-    videoUrl: '/attendance-demo.mp4'
+    videoUrl: process.env.PUBLIC_URL + '/attendance-demo.mp4'
   },
   {
     name: 'Recipe Finder Web Application',
     stack: 'React, REST API, JavaScript',
     description: 'A full-stack recipe search app using React.js and a public food API enabling users to search and filter recipes.',
     url: 'https://shreas0.github.io/recipe-finder/',
-    videoUrl: '/recipe-demo.mp4'
+    videoUrl: process.env.PUBLIC_URL + '/recipe-demo.mp4'
   }
 ];
 
