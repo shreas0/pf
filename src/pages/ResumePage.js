@@ -1,5 +1,6 @@
 import SectionTitle from '../components/SectionTitle';
 import resumeImage from '../assets/myself3.png';
+import certificateFive from '../assets/cerc-5.png';
 import { profile } from '../data/portfolioData';
 import resumeDoc from '../data/Shreshtha_Sharma_Resume.pdf';
 
@@ -62,6 +63,7 @@ function ResumePage() {
             <img src={process.env.PUBLIC_URL + "/cerc-2.jpg"} alt="Certification 2" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
             <img src={process.env.PUBLIC_URL + "/cer3.jpg"} alt="Certification 3" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
             <img src={process.env.PUBLIC_URL + "/cerc-4.jpg"} alt="Certification 4" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={certificateFive} alt="Certification 5" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
           </div>
         </div>
       </div>

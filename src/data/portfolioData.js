@@ -173,6 +173,14 @@ export const projects = [
     description: 'A full-stack recipe search app using React.js and a public food API enabling users to search and filter recipes.',
     url: 'https://shreas0.github.io/recipe-finder/',
     videoUrl: process.env.PUBLIC_URL + '/recipe-demo.mp4'
+  },
+  {
+    name: 'Simple Chatbot',
+    stack: 'Python, Streamlit',
+    description: 'A simple chatbot application built using Python and Streamlit.',
+    url: 'https://simplechatbotbysiri.streamlit.app/',
+    githubUrl: 'https://github.com/shreas0/simple_chatbot',
+    videoUrl: process.env.PUBLIC_URL + '/chatbot-demo.mp4'
   }
 ];
 
