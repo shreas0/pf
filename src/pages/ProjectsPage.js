@@ -47,21 +47,10 @@ function ProjectsPage() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-primary" 
-                style={{ marginTop: '1rem', display: 'inline-block', marginRight: '0.5rem' }}
+                style={{ marginTop: '1rem', display: 'inline-block' }}
               >
                 Live Demo
               </a>
-              {project.githubUrl && (
-                <a 
-                  href={project.githubUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-secondary" 
-                  style={{ marginTop: '1rem', display: 'inline-block' }}
-                >
-                  GitHub
-                </a>
-              )}
             </div>
           </article>
         ))}
