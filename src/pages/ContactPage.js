@@ -37,7 +37,6 @@ function ContactPage() {
               <div style={{ display: 'flex', alignItems: 'center', color: 'var(--text-secondary)' }}>
                 {getIcon(item.label)}
               </div>
-              <span style={{ fontWeight: '500' }}>{item.label}:</span>
               <a href={item.href} target="_blank" rel="noreferrer" style={{ marginLeft: 'auto' }}>
                 {item.value}
               </a>
