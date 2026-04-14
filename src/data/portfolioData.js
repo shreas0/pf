@@ -179,7 +179,6 @@ export const projects = [
     stack: 'Python, Streamlit',
     description: 'A simple chatbot application built using Python and Streamlit.',
     url: 'https://simplechatbotbysiri.streamlit.app/',
-    githubUrl: 'https://github.com/shreas0/simple_chatbot',
     videoUrl: process.env.PUBLIC_URL + '/chatbot-demo.mp4'
   }
 ];
