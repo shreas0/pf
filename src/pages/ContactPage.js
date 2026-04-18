@@ -28,13 +28,13 @@ function ContactPage() {
       <div className="card-elevated contact-card">
         <SectionTitle
           eyebrow="Contact"
-          title="Let us connect"
+          title="Let's *connect*"
           subtitle="Open to collaboration, project discussions, and internships in software or AI/ML domains."
         />
         <ul className="contact-list">
           {contactLinks.map((item) => (
             <li key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', color: 'var(--text-secondary)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', color: 'var(--muted)' }}>
                 {getIcon(item.label)}
               </div>
               <a href={item.href} target="_blank" rel="noreferrer" style={{ marginLeft: 'auto' }}>

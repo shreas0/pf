@@ -4,55 +4,51 @@ import { useRef, useState } from 'react';
 
 function NavBar() {
   const [hoverStyle, setHoverStyle] = useState({ opacity: 0, width: 0, height: 0, transform: 'translate(0px, 0px)' });
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark
   const navRef = useRef(null);
-
-  const DarkMode = () => {
-    const root = document.documentElement;
-    root.style.setProperty('--bg', '#0f172a');
-    root.style.setProperty('--ink', '#f8fafc');
-    root.style.setProperty('--muted', '#cbd5e1');
-    root.style.setProperty('--card', 'rgba(30, 41, 59, 0.78)');
-    root.style.setProperty('--card-strong', '#1e293b');
-    root.style.setProperty('--line', 'rgba(148, 163, 184, 0.15)');
-    
-    
-    document.body.style.backgroundColor = '#0f172a';
-    
-    
-    const grid = document.querySelector('.backdrop-grid');
-    if (grid) {
-      grid.style.backgroundImage = 'linear-gradient(rgba(248, 250, 252, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(248, 250, 252, 0.05) 1px, transparent 1px)';
-    }
-    const glow = document.querySelector('.backdrop-glow');
-    if (glow) {
-      glow.style.background = 'radial-gradient(circle at 8% 12%, rgba(14, 165, 233, 0.15), transparent 32%), radial-gradient(circle at 89% 10%, rgba(34, 197, 94, 0.1), transparent 26%), radial-gradient(circle at 82% 86%, rgba(56, 189, 248, 0.1), transparent 30%), linear-gradient(180deg, #0f172a 0%, #1e293b 100%)';
-    }
-
-    setIsDarkMode(true);
-  };
 
   const LightMode = () => {
     const root = document.documentElement;
-    root.style.setProperty('--bg', '#f4f8ff');
-    root.style.setProperty('--ink', '#0f172a');
-    root.style.setProperty('--muted', '#475569');
-    root.style.setProperty('--card', 'rgba(255, 255, 255, 0.78)');
-    root.style.setProperty('--card-strong', '#ffffff');
-    root.style.setProperty('--line', 'rgba(148, 163, 184, 0.28)');
-    
-    document.body.style.backgroundColor = '#f4f8ff';
-    
-    const grid = document.querySelector('.backdrop-grid');
-    if (grid) {
-      grid.style.backgroundImage = 'linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px)';
-    }
-    const glow = document.querySelector('.backdrop-glow');
-    if (glow) {
-      glow.style.background = 'radial-gradient(circle at 8% 12%, rgba(14, 165, 233, 0.24), transparent 32%), radial-gradient(circle at 89% 10%, rgba(34, 197, 94, 0.2), transparent 26%), radial-gradient(circle at 82% 86%, rgba(56, 189, 248, 0.18), transparent 30%), linear-gradient(180deg, #f8fbff 0%, #ecf5ff 100%)';
-    }
+    root.style.setProperty('--bg-deep', '#f4f1eb');
+    root.style.setProperty('--bg-surface', '#eae7e0');
+    root.style.setProperty('--bg-elevated', '#e0ded7');
+    root.style.setProperty('--bg-card', 'rgba(234, 231, 224, 0.6)');
+    root.style.setProperty('--ink', '#1a1816');
+    root.style.setProperty('--ink-dim', '#5a5650');
+    root.style.setProperty('--muted', '#8a8580');
+    root.style.setProperty('--rule', 'rgba(0, 0, 0, 0.08)');
+    root.style.setProperty('--rule-strong', 'rgba(0, 0, 0, 0.14)');
+    root.style.setProperty('--accent', '#9a7b3c');
+    root.style.setProperty('--accent-glow', 'rgba(154, 123, 60, 0.12)');
+    root.style.setProperty('--accent-warm', '#b08e48');
+    root.style.setProperty('--accent-dim', 'rgba(154, 123, 60, 0.06)');
+    root.style.setProperty('--glass-bg', 'rgba(244, 241, 235, 0.7)');
+    root.style.setProperty('--glass-border', 'rgba(0, 0, 0, 0.06)');
 
+    document.body.style.backgroundColor = '#f4f1eb';
     setIsDarkMode(false);
+  };
+
+  const DarkMode = () => {
+    const root = document.documentElement;
+    root.style.setProperty('--bg-deep', '#0c0e12');
+    root.style.setProperty('--bg-surface', '#13161c');
+    root.style.setProperty('--bg-elevated', '#1a1e26');
+    root.style.setProperty('--bg-card', 'rgba(26, 30, 38, 0.6)');
+    root.style.setProperty('--ink', '#e8e4dc');
+    root.style.setProperty('--ink-dim', '#a09a90');
+    root.style.setProperty('--muted', '#6e6960');
+    root.style.setProperty('--rule', 'rgba(255, 255, 255, 0.07)');
+    root.style.setProperty('--rule-strong', 'rgba(255, 255, 255, 0.12)');
+    root.style.setProperty('--accent', '#c8a55c');
+    root.style.setProperty('--accent-glow', 'rgba(200, 165, 92, 0.15)');
+    root.style.setProperty('--accent-warm', '#d4b068');
+    root.style.setProperty('--accent-dim', 'rgba(200, 165, 92, 0.06)');
+    root.style.setProperty('--glass-bg', 'rgba(19, 22, 28, 0.65)');
+    root.style.setProperty('--glass-border', 'rgba(255, 255, 255, 0.06)');
+
+    document.body.style.backgroundColor = '#0c0e12';
+    setIsDarkMode(true);
   };
 
   const toggleTheme = () => {
@@ -111,23 +107,37 @@ function NavBar() {
       </nav>
       <button 
         onClick={toggleTheme} 
+        className="theme-toggle"
         style={{
           background: 'transparent',
-          border: '1px solid var(--line)',
-          borderRadius: '50%',
-          width: '36px',
-          height: '36px',
+          border: '1px solid var(--rule-strong)',
+          borderRadius: '6px',
+          padding: '6px 14px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           cursor: 'pointer',
-          color: 'var(--ink)',
-          fontSize: '1.1rem',
+          color: 'var(--muted)',
+          fontFamily: "'Inter', sans-serif",
+          fontSize: '10px',
+          fontWeight: 500,
+          letterSpacing: '0.16em',
+          textTransform: 'uppercase',
           transition: 'all 0.3s ease'
         }}
-        aria-label="Toggle Dark Mode"
+        onMouseEnter={(e) => {
+          e.target.style.background = 'var(--accent)';
+          e.target.style.color = 'var(--bg-deep)';
+          e.target.style.borderColor = 'var(--accent)';
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.background = 'transparent';
+          e.target.style.color = 'var(--muted)';
+          e.target.style.borderColor = 'var(--rule-strong)';
+        }}
+        aria-label="Toggle Theme"
       >
-        {isDarkMode ? '🌙' : '☀️'}
+        {isDarkMode ? '☀ Light' : '☾ Dark'}
       </button>
     </header>
   );

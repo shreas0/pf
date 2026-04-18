@@ -30,7 +30,7 @@ function ResumePage() {
       <div className="card-elevated resume-main">
         <SectionTitle
           eyebrow="Resume"
-          title="Profile Snapshot"
+          title="Profile *Snapshot*"
           subtitle="A concise overview of education, focus areas, and current direction."
         />
         <h2>{profile.name}</h2>
@@ -59,11 +59,11 @@ function ResumePage() {
         <div className="resume-block">
           <h3>Certifications</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1rem' }}>
-            <img src={process.env.PUBLIC_URL + "/cerc-1.jpg"} alt="Certification 1" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src={process.env.PUBLIC_URL + "/cerc-2.jpg"} alt="Certification 2" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src={process.env.PUBLIC_URL + "/cer3.jpg"} alt="Certification 3" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src={process.env.PUBLIC_URL + "/cerc-4.jpg"} alt="Certification 4" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
-            <img src={certificateFive} alt="Certification 5" style={{ width: '100%', borderRadius: 'var(--radius-sm)', border: '1px solid var(--line)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-1.jpg"} alt="Certification 1" style={{ width: '100%', borderRadius: '4px', border: '1px solid var(--rule-strong)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-2.jpg"} alt="Certification 2" style={{ width: '100%', borderRadius: '4px', border: '1px solid var(--rule-strong)' }} />
+            <img src={process.env.PUBLIC_URL + "/cer3.jpg"} alt="Certification 3" style={{ width: '100%', borderRadius: '4px', border: '1px solid var(--rule-strong)' }} />
+            <img src={process.env.PUBLIC_URL + "/cerc-4.jpg"} alt="Certification 4" style={{ width: '100%', borderRadius: '4px', border: '1px solid var(--rule-strong)' }} />
+            <img src={certificateFive} alt="Certification 5" style={{ width: '100%', borderRadius: '4px', border: '1px solid var(--rule-strong)' }} />
           </div>
         </div>
       </div>

@@ -13,11 +13,13 @@ function HomePage() {
           </figure>
           <div>
             <SectionTitle
-              eyebrow="Portfolio"
-              title={profile.name}
+              eyebrow="Available for Work"
+              title={`Crafting *experiences* that endure.`}
               subtitle={profile.title}
             />
-            <p className="hero-copy">{profile.tagline}</p>
+            <p className="hero-copy">
+              A designer and developer focused on purposeful detail — building interfaces that are quiet, capable, and exactly where they need to be.
+            </p>
             <div className="hero-actions">
               <Link to="/about" className="btn btn-primary">
                 Explore About

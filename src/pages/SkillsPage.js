@@ -7,7 +7,7 @@ function SkillsPage() {
     <section>
       <SectionTitle
         eyebrow="Capabilities"
-        title="My Skills"
+        title="What I *bring* to the table."
         subtitle="A structured overview of technical and creative strengths with practical confidence levels."
       />
       <div className="skills-grid">

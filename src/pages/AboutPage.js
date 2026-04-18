@@ -22,7 +22,7 @@ function AboutPage() {
       <div className="card-elevated about-card">
         <SectionTitle
           eyebrow="About Me"
-          title="Details About Me"
+          title="The *story* behind the code."
           subtitle="A deeper dive into my background, interests, and what drives me in the tech world."
         />
         <div className="about-paragraphs">

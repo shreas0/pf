@@ -6,7 +6,7 @@ function ProjectsPage() {
     <section>
       <SectionTitle
         eyebrow="My Work"
-        title="Featured Projects"
+        title="Featured *Projects*"
         subtitle="A collection of web applications highlighting my backend logic, API integration, and frontend experiences."
       />
       <div className="projects-grid" style={{ display: 'grid', gap: '2rem' }}>
@@ -21,9 +21,10 @@ function ProjectsPage() {
               style={{
                 width: '100%', 
                 aspectRatio: '16 / 9', 
-                background: 'var(--line)', 
-                borderRadius: 'var(--radius-sm)',
-                overflow: 'hidden'
+                background: 'var(--bg-elevated)', 
+                borderRadius: '8px',
+                overflow: 'hidden',
+                border: '1px solid var(--rule-strong)'
               }}
             >
               {}
