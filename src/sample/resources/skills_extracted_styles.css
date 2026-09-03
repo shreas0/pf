@@ -1,0 +1,606 @@
+#content-skills{
+    width:1920px;
+    height:5033px;
+    background-color: #9d9ba1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#bgleft2{
+    z-index:2;
+    width:1050px;
+    position: absolute;
+    height:5283px;
+    left: -200px;
+    top:-250px;
+    background-color: black;
+}
+
+ul {
+    z-index: 3;
+    width:1000px;
+    list-style: none;
+    height:50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size:30px;
+    justify-content: space-evenly;
+    position: fixed;
+    top:5px;
+    right: 50px;
+    align-items: center;
+    border: 2px black solid;
+    border-radius:35px;
+    border-left: none;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.contact{
+    background-color: black;
+    color:#bdbac3;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:2px black solid;
+    border-radius:35px;
+    font-weight: bold;
+}
+
+.aboutme{
+     transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.aboutme:hover{
+    background-color: black;
+    color:#bdbac3;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:2px black solid;
+    border-radius:35px;
+    font-size: 35px;
+}
+
+.aboutmelock{
+     transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    background-color: black;
+    color:#bdbac3;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:2px black solid;
+    border-radius:35px;
+    font-size: 35px;
+}
+
+.resume{
+     transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.resume:hover{
+    background-color: black;
+    color:#bdbac3;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:2px black solid;
+    border-radius:35px;
+    font-size: 35px;
+}
+
+.details{
+    color:#bdbac3;
+    text-transform: capitalize;
+    z-index: 3;
+    align-self: flex-start;
+    font-size:80px;
+    margin-left:130px;
+    margin-top: 70px;
+    border: 5px #bdbac3 solid;
+    border-radius:75px;
+    padding:20px;
+}
+
+.skillslock{
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    background-color: black;
+    color:#bdbac3;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:2px black solid;
+    border-radius:35px;
+    font-size: 35px;
+}
+
+#leveler{
+    z-index:3;
+    color:#bdbac3;
+    width: 870px;
+    height:4900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position:relative;
+    right:550px;
+}
+
+#leveler h5{
+    font-size:40px;
+    font-weight: bold;
+    align-self: center;
+}
+
+#logo1{
+    width:100px;
+    height:100px;
+    background-color: #9d9ba1;
+    background-image: url("/resources/figma.png");
+    background-size: cover;
+    border:2px #9d9ba1 solid;
+    border-radius:15px;
+}
+
+#leveler1{
+    background-color: #9d9ba1;
+    width:500px;
+    height:50px;
+    margin:20px;
+}
+
+#leveler2{
+    background-color: #9d9ba1;
+    width:500px;
+    height:50px;
+    margin:20px;
+}
+
+#leveler3{
+    background-color: #9d9ba1;
+    width:500px;
+    height:50px;
+    margin:20px;
+}
+
+#leveler4{
+    background-color: #9d9ba1;
+    width:500px;
+    height:50px;
+    margin:20px;
+}
+
+#leveler5{
+    background-color: #9d9ba1;
+    width:500px;
+    height:50px;
+    margin:20px;
+}
+
+#logo2{
+    width:100px;
+    height:100px;
+    background-color: #9d9ba1;
+    background-image: url("/resources/css.png");
+    background-size: cover;
+    border:2px #9d9ba1 solid;
+    border-radius:15px;
+}
+
+#logo3{
+    width:100px;
+    height:100px;
+    background-color: #9d9ba1;
+    background-image: url("/resources/html.png");
+    background-size: cover;
+    border:2px #9d9ba1 solid;
+    border-radius:15px;
+}
+
+#logo4{
+    width:100px;
+    height:100px;
+    background-color: #9d9ba1;
+    background-image: url("/resources/javascript.png");
+    background-size: cover;
+    border:2px #9d9ba1 solid;
+    border-radius:15px;
+}
+
+#logo5{
+    width:100px;
+    height:100px;
+    background-color: #9d9ba1;
+    background-image: url("/resources/python.png");
+    background-size: cover;
+    border:2px #9d9ba1 solid;
+    border-radius:15px;
+}
+
+#firstapp{
+    display: flex;
+    margin:40px;
+}
+
+#secondapp{
+    display:flex;
+    margin: 40px;
+}
+
+#thirdapp{
+    display:flex;
+    margin: 40px;
+}
+
+#fourthapp{
+    display:flex;
+    margin: 40px;
+}
+
+#fifthapp{
+    display:flex;
+    margin: 40px;
+}
+
+.webdevelopment{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.uiux {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.frontend{
+    font-size:40px;
+    border: 2px #bdbac3 solid;
+    padding:7px;
+}
+
+.backend{
+    font-size:40px;
+    border: 2px #bdbac3 solid;
+    padding:7px;
+}
+
+#leveler1 #level{
+    background-color: #4c4b4f;
+    width: 66%;
+    height: 100%;
+}
+
+#leveler2 #level{
+    background-color: #4c4b4f;
+    width: 75%;
+    height: 100%;
+}
+
+#leveler3 #level{
+    background-color: #4c4b4f;
+    width: 60%;
+    height: 100%;
+}
+
+#leveler4 #level{
+    background-color: #4c4b4f;
+    width: 85%;
+    height: 100%;
+}
+
+#leveler5 #level{
+    background-color: #4c4b4f;
+    width: 60%;
+    height: 100%;
+}
+@keyframes slideToEnd {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#webdev-front{
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 600px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+}
+#webdev-back{
+    right:200px;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 400px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+    top:1235px;
+    animation : slideToEnd 1s ease-out forwards;
+}
+
+#programmingdesc{
+    right:200px;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 850px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+    top:1850px;
+    animation : slideToEnd 1s ease-out forwards;
+}
+#uiuxdesc{
+    right:200px;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 450px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+    top:2850px;
+}
+
+#motiongraphicsdesc{
+    right:200px;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 650px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+    top:2850px;
+}
+
+#toolsdesc{
+    right:200px;
+    display: flex;
+    flex-wrap:wrap;
+    width: 800px;
+    height: 650px;
+    text-align: justify;
+    background-color: #6a686e;
+    border: 2px #6a686e solid;
+    border-radius:35px;
+    padding : 20px;
+    top:2850px;
+}
+
+#description div{
+    box-shadow: 10px 20px 35px rgba(0,0,0,0.4);
+    animation : slideToEnd 1s ease-out forwards;
+    animation-timeline : view();
+    animation-range: 0% cover 40%;
+
+}
+
+
+#description{
+    z-index:1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width:1550px;
+    height:4550px;
+    bottom:1px;
+    padding:40px;
+    right: 175px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+#description h1{
+    font-size:40px;
+    border: 2px black solid;
+    border-radius: 35px;
+    padding: 8px;
+    box-shadow: 0 2px 2px 2px black;
+}
+
+#description h3{
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+#cs h1{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#cs #logo1{
+    background-image: url("/resources/python.png");
+}
+
+#cs #logo2{
+    background-image: url("/resources/c-.png");
+}
+
+#cs #logo3{
+    background-image: url("/resources/java.png");
+}
+
+#cs #logo4{
+    background-image: url("/resources/c.png");
+}
+
+
+#uiux h1{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#uiux #logo1{
+    background-image: url("/resources/figma.png");
+}
+
+#uiux #logo2{
+    background-image: url("/resources/canva.png");
+}
+
+#motiongraphics h1{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#motiongraphics #logo1{
+    background-image: url("/resources/photoshop.png");
+}
+
+#motiongraphics #logo2{
+    background-image: url("/resources/premiere-pro.png");
+}
+
+#motiongraphics #logo3{
+    background-image: url("/resources/after-effects.png");
+}
+
+
+#toolsworkflow h1{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#toolsworkflow #logo1{
+    background-image: url("/resources/github.png");
+}
+
+#toolsworkflow #logo2{
+    background-image: url("/resources/safari.png");
+}
+
+#toolsworkflow #logo3{
+    background-image: url("/resources/vscode.png");
+}
+
+#toolsworkflow #firstapp #level{
+    width: 90%;
+}
+#toolsworkflow #secondapp #level{
+    width: 99%;
+}
+#toolsworkflow #thirdapp #level{
+    width: 99%;
+}
+
+#motiongraphics #firstapp #level{
+    width: 80%;
+}
+#motiongraphics #second #level{
+    width: 85%;
+}
+#motiongraphics #third #level{
+    width: 86%;
+}
+#cs-desc{
+position:absolute;
+right:200px;
+display: flex;
+flex-wrap:wrap;
+width: 800px;
+height: 800px;
+text-align: justify;
+background-color: #6a686e;
+border: 2px #6a686e solid;
+border-radius:35px;
+padding : 20px;
+top:1800px;
+}
+
+#uiux-desc{
+position:absolute;
+right:200px;
+display: flex;
+flex-wrap:wrap;
+width: 800px;
+height: 300px;
+text-align: justify;
+background-color: #6a686e;
+border: 2px #6a686e solid;
+border-radius:35px;
+padding : 20px;
+top:2750px;
+}
+
+#motiongraphics-desc{
+position:absolute;
+right:200px;
+display: flex;
+flex-wrap:wrap;
+width: 800px;
+height: 650px;
+text-align: justify;
+background-color: #6a686e;
+border: 2px #6a686e solid;
+border-radius:35px;
+padding : 20px;
+top:3200px;
+}
+
+#toolsworkflow-desc{
+position:absolute;
+right:200px;
+display: flex;
+flex-wrap:wrap;
+width: 800px;
+height: 550px;
+text-align: justify;
+background-color: #6a686e;
+border: 2px #6a686e solid;
+border-radius:35px;
+padding : 20px;
+top:4000px;
+}
+
+#leveler1 #level,
+#leveler2 #level,
+#leveler3 #level,
+#leveler4 #level,
+#leveler5 #level {
+  width: 0% !important;
+}
+
+
+#leveler h5 {
+  font-size: 40px;
+  font-weight: bold;
+  align-self: center;
+}
