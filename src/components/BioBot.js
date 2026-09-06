@@ -23,11 +23,20 @@ function formatTime() {
   return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
+function toHref(url) {
+  if (!url) return '';
+  const trimmed = url.trim();
+  if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(trimmed)) {
+    return trimmed;
+  }
+  return `https://${trimmed}`;
+}
+
 // Parses email addresses and URLs into clickable links
 function parseLinksAndEmails(str, keyPrefix) {
   if (!str) return null;
 
-  const linkRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(https?:\/\/[^\s)]+)/gi;
+  const linkRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|((?:https?:\/\/|www\.)[^\s)]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|io|dev|app|net|in|me|ai)(?:\/[^\s)]*)?)/gi;
   const parts = [];
   let last = 0;
   let match;
@@ -60,11 +69,15 @@ function parseLinksAndEmails(str, keyPrefix) {
         </a>
       );
     } else if (match[2]) {
-      // Clickable URL link
+      // Clickable URL link (strip trailing punctuation like . or ,)
+      const rawUrl = match[2];
+      const cleanUrl = rawUrl.replace(/[.,;:!?]+$/, '');
+      const trailing = rawUrl.slice(cleanUrl.length);
+
       parts.push(
         <a
           key={key}
-          href={matchedStr}
+          href={toHref(cleanUrl)}
           target="_blank"
           rel="noreferrer"
           style={{
@@ -76,9 +89,13 @@ function parseLinksAndEmails(str, keyPrefix) {
             cursor: 'pointer'
           }}
         >
-          {matchedStr}
+          {cleanUrl}
         </a>
       );
+
+      if (trailing) {
+        parts.push(trailing);
+      }
     }
 
     last = linkRegex.lastIndex;
@@ -95,7 +112,7 @@ function parseLinksAndEmails(str, keyPrefix) {
 function parseInline(str, lineKey) {
   if (!str) return null;
 
-  const tokenRegex = /(\[([^\]]+)\]\((https?:\/\/[^\s)]+)\))|([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(https?:\/\/[^\s)]+)|(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*]+)\*)/g;
+  const tokenRegex = /(\[([^\]]+)\]\(([^)]+)\))|([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|((?:https?:\/\/|www\.)[^\s)]+|(?:[a-zA-Z0-9-]+\.)+(?:com|org|io|dev|app|net|in|me|ai)(?:\/[^\s)]*)?)|(\*\*([^*]+)\*\*)|(`([^`]+)`)|(\*([^*]+)\*)/g;
 
   const result = [];
   let lastIndex = 0;
@@ -113,11 +130,12 @@ function parseInline(str, lineKey) {
     if (match[1]) {
       // Markdown link [label](url)
       const label = match[2];
-      const url = match[3];
+      const rawUrl = match[3];
+      const cleanUrl = rawUrl.replace(/[.,;:!?]+$/, '');
       result.push(
         <a
           key={key}
-          href={url}
+          href={toHref(cleanUrl)}
           target="_blank"
           rel="noreferrer"
           style={{
@@ -153,11 +171,13 @@ function parseInline(str, lineKey) {
       );
     } else if (match[5]) {
       // Direct raw URL
-      const url = match[5];
+      const rawUrl = match[5];
+      const cleanUrl = rawUrl.replace(/[.,;:!?]+$/, '');
+      const trailing = rawUrl.slice(cleanUrl.length);
       result.push(
         <a
           key={key}
-          href={url}
+          href={toHref(cleanUrl)}
           target="_blank"
           rel="noreferrer"
           style={{
@@ -169,9 +189,12 @@ function parseInline(str, lineKey) {
             cursor: 'pointer'
           }}
         >
-          {url}
+          {cleanUrl}
         </a>
       );
+      if (trailing) {
+        result.push(trailing);
+      }
     } else if (match[6]) {
       // Bold **text** (emails and links inside bold text are also parsed and made clickable)
       const boldText = match[7];

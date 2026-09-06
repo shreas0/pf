@@ -354,7 +354,7 @@ a:hover::after {
 
 .hero-lead {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: minmax(280px, 420px) 1fr;
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
 }
@@ -389,6 +389,13 @@ a:hover::after {
   position: relative;
 }
 
+.portrait-frame {
+  width: 100%;
+  max-width: min(420px, calc(78vh * 0.75));
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
+}
+
 .portrait-frame::after,
 .profile-thumb-wrap::after {
   content: '';
@@ -407,6 +414,7 @@ a:hover::after {
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: top center;
   border-radius: 0;
   filter: contrast(1.08) saturate(0.85) brightness(0.92);
   transition: filter 0.6s ease, transform 0.8s var(--ease);
@@ -420,7 +428,7 @@ a:hover::after {
 
 .portrait-image {
   aspect-ratio: 3 / 4;
-  max-height: 80vh;
+  transform-origin: top center;
 }
 
 .profile-thumb,
@@ -1279,6 +1287,7 @@ a:hover::after {
   }
 
   .hero-lead {
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 
@@ -1358,9 +1367,6 @@ a:hover::after {
   .profile-thumb {
     animation: none !important;
     transition: none !important;
-  }
-}@media (max-width: 768px) {
-  .hero-lead, .about-layout, .resume-layout, .contact-layout {
   }
 }
 

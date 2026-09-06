@@ -160,6 +160,13 @@ export const skillGroups = [
 ];
 
 export const projects = [
+   {
+    name: "Face Unlock",
+    stack: "Python, Numpy, Pickle, C++, pywin32, Keyring",
+    description: "Native C++/Python face-unlock for the Windows 11 lock screen, using ArcFace recognition and blink-liveness detection.",
+    url: "https://github.com/shreas0/face-unlock-for-windows.git",
+    videoUrl: process.env.PUBLIC_URL + '/face-unlock-for-windows-demo.mp4'
+  },
   {
     name: 'Attendance Management System',
     stack: 'React, JavaScript, CSS',
@@ -180,18 +187,12 @@ export const projects = [
     description: 'A simple chatbot application built using Python and Streamlit.',
     url: 'https://simplechatbotbysiri.streamlit.app/',
     videoUrl: process.env.PUBLIC_URL + '/chatbot-demo.mp4'
-  },
-  {
-    name: "Face Unlock",
-    stack: "Python, Numpy, Pickle, C++, pywin32, Keyring",
-    description: "Native C++/Python face-unlock for the Windows 11 lock screen, using ArcFace recognition and blink-liveness detection.",
-    url: "https://github.com/shreas0/face-unlock-for-windows.git",
-    videoUrl: process.env.PUBLIC_URL + '/face-unlock-for-windows-demo.mp4'
   }
+ 
 ];
 
 export const contactLinks = [
-  { label: 'Email', value: 'shreshtha2sh@gmail.com', href: 'mailto:shreshtha2sh@gmail.com' },
+  { label: 'Email', value: 'shreshtha0sh@gmail.com', href: 'mailto:shreshtha0sh@gmail.com' },
   { label: 'GitHub', value: 'github.com/shreas0', href: 'https://github.com/shreas0' },
-  { label: 'LinkedIn', value: 'www.linkedin.com/in/shreshtha-sharma-siri', href: 'https://www.linkedin.com/in/shreshtha-sharma-siri' }
+  { label: 'LinkedIn', value: 'www.linkedin.com/in/sharma-shreshtha', href: 'https://www.linkedin.com/in/sharma-shreshtha' }
 ];
