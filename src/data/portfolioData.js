@@ -165,7 +165,9 @@ export const projects = [
     stack: "Python, Numpy, Pickle, C++, pywin32, Keyring",
     description: "Native C++/Python face-unlock for the Windows 11 lock screen, using ArcFace recognition and blink-liveness detection.",
     url: "https://github.com/shreas0/face-unlock-for-windows.git",
-    videoUrl: process.env.PUBLIC_URL + '/face-unlock-for-windows-demo.mp4'
+    videoUrl: process.env.PUBLIC_URL + '/face-unlock-for-windows-demo.mp4',
+    videoWidth: 608,
+    videoHeight: 1080
   },
   {
     name: 'Attendance Management System',

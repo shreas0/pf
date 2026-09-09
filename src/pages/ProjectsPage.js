@@ -11,34 +11,41 @@ function ProjectsPage() {
         subtitle="A collection of web applications highlighting my backend logic, API integration, and frontend experiences."
       />
       <div className="projects-grid" style={{ display: 'grid', gap: '2rem' }}>
-        {projects.map((project, index) => (
-          <article
-            key={index}
-            className="card-elevated project-card"
-            style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
-          >
-            <div
-              className="project-video-wrapper"
-              style={{
-                width: '100%',
-                aspectRatio: '16 / 9',
-                background: 'var(--bg-elevated)',
-                borderRadius: '8px',
-                overflow: 'hidden',
-                border: '1px solid var(--rule-strong)'
-              }}
+        {projects.map((project, index) => {
+          const videoWidth = project.videoWidth || (project.name === "Face Unlock" ? 608 : null);
+          const videoHeight = project.videoHeight || (project.name === "Face Unlock" ? 1080 : null);
+          const aspectRatio = videoWidth && videoHeight ? `${videoWidth} / ${videoHeight}` : '16 / 9';
+
+          return (
+            <article
+              key={index}
+              className="card-elevated project-card"
+              style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
             >
-              { }
-              <video
-                src={project.videoUrl}
-                controls
-                muted
-                loop
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              <div
+                className="project-video-wrapper"
+                style={{
+                  width: videoWidth ? `min(${videoWidth}px, 100%)` : '100%',
+                  maxWidth: videoWidth ? `${videoWidth}px` : '100%',
+                  aspectRatio: aspectRatio,
+                  background: 'var(--bg-elevated)',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  border: '1px solid var(--rule-strong)'
+                }}
               >
-                Your browser does not support the video tag.
-              </video>
-            </div>
+                <video
+                  src={project.videoUrl}
+                  controls
+                  muted
+                  loop
+                  width={videoWidth || undefined}
+                  height={videoHeight || undefined}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
 
             <div className="project-content">
               <h3>{project.name}</h3>
@@ -55,7 +62,8 @@ function ProjectsPage() {
               </a>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
